@@ -1,0 +1,67 @@
+@startuml
+'app components
+class AppComponent {
+}
+class AppModule {
+}
+class AppRoutingModule {
+}
+
+'interceptors package
+class JwtInterceptor {
+}
+
+'services package
+class AuthService {
+}
+class VideoService {
+}
+
+'components
+class LoginComponent {
+}
+class LoginModule {
+}
+class RegistrationComponent {
+}
+class RegistrationModule {
+}
+class PageNotFoundComponent {
+}
+class MenuComponent {
+}
+class MenuModule {
+}
+class AboutComponent {
+}
+class AboutModule {
+}
+class ProfileComponent {
+}
+class ProfileModule {
+}
+class StreamComponent {
+}
+class StreamModule {
+}
+class HomeComponent {
+}
+class HomeModule {
+}
+class VideoComponent {
+}
+class FileInputDialogComponent {
+}
+
+'models package
+interface AuthInfo {
+}
+interface JwtModel {
+}
+interface RefreshToken {
+}
+interface User {
+}
+interface Video {
+}
+@enduml

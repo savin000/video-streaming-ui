@@ -1,0 +1,37 @@
+<div [className]="'tabs-container'">
+    <tui-tabs
+        [className]="'tabs'"
+        [(activeItemIndex)]="activeItemIndex"
+    >
+        <button
+            tuiTab
+        >
+            Home
+        </button>
+
+        <button
+            tuiTab
+        >
+            Profile
+        </button>
+
+        <button
+            tuiTab
+        >
+            Stream (Experimental)
+        </button>
+
+        <button
+            tuiTab
+        >
+            About
+        </button>
+    </tui-tabs>
+
+    <div [className]="'current-tab'">
+        <app-home *ngIf="activeItemIndex == 0"></app-home>
+        <app-profile *ngIf="activeItemIndex == 1"></app-profile>
+        <app-stream *ngIf="activeItemIndex == 2"></app-stream>
+        <app-about *ngIf="activeItemIndex == 3"></app-about>
+    </div>
+</div>

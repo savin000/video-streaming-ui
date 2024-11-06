@@ -1,0 +1,16 @@
+<div [className]="'video-container'">
+    <video
+        controls
+        tuiMedia
+        width="360"
+        height="220"
+        class="video"
+    >
+        <source
+            [src]="sourceLink + title + '?username=' + username"
+            type="video/mp4"
+        />
+    </video>
+
+    <label [className]="'video-name'">{{title}}</label>
+</div>

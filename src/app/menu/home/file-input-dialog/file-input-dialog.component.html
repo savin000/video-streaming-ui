@@ -1,0 +1,41 @@
+<div [className]="'dialog-container'">
+    <form
+        [formGroup]="inputForm"
+    >
+        <tui-input
+            [className]="'video-name-input'"
+            formControlName="video-name"
+            formControlName="inputControl"
+        >
+            Video Name
+            <input
+                inputmode="numeric"
+                tuiTextfield
+            />
+        </tui-input>
+    </form>
+
+
+    <tui-input-files
+        [className]="'file-input'"
+        [formControl]="control"
+        accept="video/*"
+    ></tui-input-files>
+
+    <tui-files>
+        <tui-file
+            *ngIf="loadedFiles$ | async as file"
+            [file]="file"
+        ></tui-file>
+    </tui-files>
+
+    <button
+        [className]="'submit-button'"
+        tuiButton
+        type="button"
+        class="tui-space_right-3 tui-space_bottom-3"
+        (click)="onSubmitVideoButtonClick()"
+    >
+        Submit
+    </button>
+</div>

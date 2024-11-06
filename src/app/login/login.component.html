@@ -1,0 +1,53 @@
+<div class="tui-container">
+    <form
+        class="sign-in-form"
+        [formGroup]="signInForm"
+    >
+        <h1 class="sign-in-title">Sign in</h1>
+
+        <tui-input
+            class="sign-in-input"
+            tuiTextfieldSize="s"
+            formControlName="usernameInput"
+        >
+            Username
+            <input
+                tuiTextfield
+            />
+        </tui-input>
+
+        <tui-input-password
+            class="sign-in-input"
+            tuiTextfieldSize="s"
+            formControlName="passwordInput"
+        >
+            Password
+            <input
+                tuiTextfield
+            />
+        </tui-input-password>
+
+        <div class="buttons-container">
+            <button
+                class="create-account-button"
+                appearance="flat"
+                tuiButton
+                type="button"
+                (click)="onCreateAccountButtonClick()"
+            >
+                Create account
+            </button>
+
+            <button
+                class="submit-button"
+                appearance="primary"
+                tuiButton
+                type="button"
+                [disabled]="!areCredentialsEntered"
+                (click)="onSubmitButtonClick()"
+            >
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
